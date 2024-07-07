@@ -6,7 +6,7 @@ license = "Apache-2.0"
 edition = "2021"
 
 [[bin]]
-name = "ore"
+name = "ore-relayer"
 path = "src/main.rs"
 
 [features]
@@ -20,9 +20,9 @@ chrono = "0.4.34"
 clap = { version = "4.4.12", features = ["derive"] }
 futures = "0.3.30"
 log = "0.4"
-ore-api = { git = "https://github.com/regolith-labs/ore", branch = "master" }
+ore-api = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
 ore-relay-api = { path = "../ore-relayer/api" }
-utils = { git = "https://github.com/regolith-labs/ore", branch = "master" }
+utils = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
 rand = "0.8.4"
 solana-cli-config = "1.18"
 solana-client = "1.18"
