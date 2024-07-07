@@ -1,7 +1,7 @@
 [package]
-name = "ore-cli"
+name = "ore-relayer-cli"
 version = "0.4.12-alpha"
-description = "A command line interface for the Ore program."
+description = "A command line interface for the ORE relayer program."
 license = "Apache-2.0"
 edition = "2021"
 
@@ -21,13 +21,14 @@ clap = { version = "4.4.12", features = ["derive"] }
 futures = "0.3.30"
 log = "0.4"
 ore-api = { git = "https://github.com/regolith-labs/ore", branch = "master" }
+ore-relay-api = { path = "../ore-relayer/api" }
 utils = { git = "https://github.com/regolith-labs/ore", branch = "master" }
 rand = "0.8.4"
-solana-cli-config = "1.18.11"
-solana-client = "1.18.11"
-solana-program = "1.18.11"
-solana-sdk = "1.18.11"
-solana-transaction-status = "1.18.11"
+solana-cli-config = "1.18"
+solana-client = "1.18"
+solana-program = "1.18"
+solana-sdk = "1.18"
+solana-transaction-status = "1.18"
 spl-token = { version = "^4", features = ["no-entrypoint"] }
 spl-associated-token-account = { version = "^2.2", features = [
   "no-entrypoint",

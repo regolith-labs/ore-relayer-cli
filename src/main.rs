@@ -1,4 +1,5 @@
-mod initialize;
+mod open_relayer;
+mod send_and_confirm;
 mod utils;
 
 use std::sync::Arc;
@@ -49,12 +50,12 @@ struct Args {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    #[command(about = "Initialize the program")]
-    Initialize(InitializeArgs),
+    #[command(about = "Open relayer account")]
+    OpenRelayer(OpenRelayerArgs),
 }
 
 #[derive(Parser, Debug)]
-struct InitializeArgs {}
+struct OpenRelayerArgs {}
 
 #[tokio::main]
 async fn main() {
@@ -80,10 +81,10 @@ async fn main() {
 
     // Execute user command
     match args.command {
-        Commands::Initialize(_) => {
-            relayer.initialize().await;
+        Commands::OpenRelayer(_) => {
+            let _ = relayer.open_relayer().await;
         }
-    }
+    };
 }
 
 impl Relayer {
