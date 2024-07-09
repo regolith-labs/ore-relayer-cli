@@ -21,8 +21,8 @@ clap = { version = "4.4.12", features = ["derive"] }
 futures = "0.3.30"
 log = "0.4"
 ore-api = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
-ore-relay-api = { path = "../ore-relayer/api" }
-utils = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
+ore-relay-api = { git = "ssh://git@github.com/regolith-labs/ore-relayer.git", branch = "relayer-integration" }
+ore-utils = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
 rand = "0.8.4"
 solana-cli-config = "1.18"
 solana-client = "1.18"
