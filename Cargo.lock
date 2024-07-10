@@ -2539,7 +2539,7 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
 [[package]]
 name = "ore-api"
 version = "2.0.0"
-source = "git+https://github.com/regolith-labs/ore?branch=relayer-integration#70fb0bcfb86eb400abcbd33e5d61b2dc8a17d8c1"
+source = "git+https://github.com/regolith-labs/ore?branch=relayer-integration#a1d906a88c4fadea27d84275e760fb7ee53e78e9"
 dependencies = [
  "array-const-fn-init",
  "bytemuck",
@@ -2559,7 +2559,7 @@ dependencies = [
 [[package]]
 name = "ore-relay-api"
 version = "2.0.0"
-source = "git+ssh://git@github.com/regolith-labs/ore-relayer.git?branch=relayer-integration#fb740ca09270e6ac947f5520c376f4bae3c170e3"
+source = "git+ssh://git@github.com/regolith-labs/ore-relayer.git?branch=relayer-integration#be2cb67828d21ba65c751b9a58e27156dabfd204"
 dependencies = [
  "bytemuck",
  "mpl-token-metadata",
@@ -2602,7 +2602,7 @@ dependencies = [
 [[package]]
 name = "ore-utils"
 version = "2.0.0"
-source = "git+https://github.com/regolith-labs/ore?branch=relayer-integration#70fb0bcfb86eb400abcbd33e5d61b2dc8a17d8c1"
+source = "git+https://github.com/regolith-labs/ore?branch=relayer-integration#a1d906a88c4fadea27d84275e760fb7ee53e78e9"
 dependencies = [
  "bytemuck",
  "solana-program",
