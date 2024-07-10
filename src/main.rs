@@ -121,4 +121,9 @@ impl Relayer {
             None => panic!("No keypair provided"),
         }
     }
+
+    const RELAY_MINER_FILEPATH: &str = "/etc/secrets/relay-miner.json";
+    pub fn miner(&self) -> Keypair {
+        read_keypair_file(Self::RELAY_MINER_FILEPATH).unwrap()
+    }
 }

@@ -10,10 +10,11 @@ use crate::Relayer;
 impl Relayer {
     pub async fn send_and_confirm(&self, ix: Instruction) -> ClientResult<Signature> {
         let signer = self.signer();
+        let miner = self.miner();
         let client = self.rpc_client.clone();
         let mut tx = Transaction::new_with_payer(&[ix], Some(&signer.pubkey()));
         let blockhash = client.get_latest_blockhash().await?;
-        tx.sign(&[&signer], blockhash);
+        tx.sign(&[&signer, &miner], blockhash);
         client.send_transaction(&tx).await
     }
 }
