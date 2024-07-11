@@ -2559,7 +2559,7 @@ dependencies = [
 [[package]]
 name = "ore-relay-api"
 version = "2.0.0"
-source = "git+ssh://git@github.com/regolith-labs/ore-relayer.git?branch=relayer-integration#be2cb67828d21ba65c751b9a58e27156dabfd204"
+source = "git+ssh://git@github.com/regolith-labs/ore-relayer.git?branch=relayer-integration#69dec5bf0c00bf43059842b944ab91e1b62ec2a8"
 dependencies = [
  "bytemuck",
  "mpl-token-metadata",
