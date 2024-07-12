@@ -8,6 +8,7 @@ impl Relayer {
         let signer = self.signer();
         let client = self.rpc_client.clone();
         let relayer = get_relayer(&client).await;
+        println!("relayer: {:?}", relayer);
         let ix = ore_relay_api::instruction::open_escrow(signer.pubkey(), relayer);
         let sig = self.send_and_confirm(ix).await?;
         println!("sig: {}", sig);
