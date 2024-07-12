@@ -14,7 +14,7 @@ impl Relayer {
         let client = self.rpc_client.clone();
         let mut tx = Transaction::new_with_payer(&[ix], Some(&signer.pubkey()));
         let blockhash = client.get_latest_blockhash().await?;
-        tx.sign(&[&signer], blockhash);
+        tx.sign(&[&signer, &miner], blockhash);
         client.send_transaction(&tx).await
     }
 }
