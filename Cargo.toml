@@ -24,13 +24,14 @@ ore-api = { git = "https://github.com/regolith-labs/ore", branch = "relayer-inte
 ore-relay-api = { git = "ssh://git@github.com/regolith-labs/ore-relayer.git", branch = "relayer-integration" }
 ore-utils = { git = "https://github.com/regolith-labs/ore", branch = "relayer-integration" }
 rand = "0.8.4"
-solana-cli-config = "1.18"
-solana-client = "1.18"
-solana-program = "1.18"
-solana-sdk = "1.18"
-solana-transaction-status = "1.18"
+solana-cli-config = "^1.18"
+solana-client = "^1.18"
+solana-program = "^1.18"
+solana-rpc-client = "^1.18"
+solana-sdk = "^1.18"
+solana-transaction-status = "^1.18"
 spl-token = { version = "^4", features = ["no-entrypoint"] }
-spl-associated-token-account = { version = "^2.2", features = [
+spl-associated-token-account = { version = "^2.3", features = [
   "no-entrypoint",
 ] }
 tokio = "1.35.1"
