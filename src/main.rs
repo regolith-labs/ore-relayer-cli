@@ -1,7 +1,5 @@
 mod open_escrow;
-mod open_relayer;
 mod send_and_confirm;
-mod utils;
 
 use std::sync::Arc;
 
@@ -51,13 +49,8 @@ struct Args {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    #[command(about = "Open relayer account")]
-    OpenRelayer(OpenRelayerArgs),
     OpenEscrow(OpenEscrowArgs),
 }
-
-#[derive(Parser, Debug)]
-struct OpenRelayerArgs;
 
 #[derive(Parser, Debug)]
 struct OpenEscrowArgs;
@@ -86,15 +79,6 @@ async fn main() {
 
     // Execute user command
     match args.command {
-        Commands::OpenRelayer(_) => {
-            let res = relayer.open_relayer().await;
-            match res {
-                Ok(_) => {}
-                Err(err) => {
-                    println!("err: {}", err.get_transaction_error().unwrap().to_string());
-                }
-            }
-        }
         Commands::OpenEscrow(_) => {
             let res = relayer.open_escrow().await;
             match res {
