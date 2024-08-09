@@ -84,7 +84,7 @@ async fn main() {
             match res {
                 Ok(_) => {}
                 Err(err) => {
-                    println!("err: {}", err.get_transaction_error().unwrap().to_string());
+                    println!("{:?}", err);
                 }
             }
         }
@@ -104,10 +104,5 @@ impl Relayer {
             Some(filepath) => read_keypair_file(filepath).unwrap(),
             None => panic!("No keypair provided"),
         }
-    }
-
-    const RELAY_MINER_FILEPATH: &'static str = "/etc/secrets/relay-miner.json";
-    pub fn miner(&self) -> Keypair {
-        read_keypair_file(Self::RELAY_MINER_FILEPATH).unwrap()
     }
 }
